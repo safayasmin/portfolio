@@ -2,9 +2,10 @@ import React from 'react';
 import { 
   Download, 
   ArrowRight, 
-  ExternalLink,
   Code2,
-  FileDown
+  FileDown,
+  Sparkles,
+  CheckCircle2
 } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
@@ -105,47 +106,60 @@ export default function Hero({ onOpenResume }) {
 
           </div>
 
-          {/* Right Column: Clean Interactive Code / Profile Card */}
+          {/* Right Column: Profile Picture & Interactive Card */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="w-full max-w-md bg-white dark:bg-[#0F111C] border border-slate-200 dark:border-white/[0.08] rounded-3xl p-6 sm:p-7 shadow-xl hover:shadow-2xl transition-all duration-300 relative group">
+            <div className="w-full max-w-sm sm:max-w-md relative">
               
-              {/* Card Window Bar */}
-              <div className="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-white/[0.08]">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-rose-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-amber-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
+              {/* Decorative Glow Ring behind picture */}
+              <div className="absolute -inset-1.5 bg-gradient-to-tr from-purple-600 via-indigo-500 to-cyan-400 rounded-3xl blur-xl opacity-40 group-hover:opacity-60 transition duration-500 pointer-events-none" />
+
+              <div className="relative bg-white dark:bg-[#0F111C] border border-slate-200 dark:border-white/[0.08] rounded-3xl p-5 sm:p-6 shadow-2xl transition-all duration-300">
+                
+                {/* Image Frame with gradient border */}
+                <div className="relative rounded-2xl overflow-hidden p-[2px] bg-gradient-to-tr from-purple-600 via-indigo-600 to-cyan-400 shadow-lg">
+                  <div className="relative w-full aspect-[4/5] rounded-[14px] overflow-hidden bg-slate-900">
+                    <img
+                      src="/safa.jpeg"
+                      alt={personalInfo.name}
+                      className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                      onError={(e) => {
+                        // Fallback in case of missing image
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
+                    
+                    {/* Status Badge overlay */}
+                    <div className="absolute bottom-3 left-3 right-3 p-2.5 rounded-xl bg-slate-900/80 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs text-white">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                        <span className="font-semibold text-xs tracking-tight">Available for Roles</span>
+                      </div>
+                      <span className="text-[11px] font-mono text-purple-300">Bridgeon Intern</span>
+                    </div>
+                  </div>
                 </div>
-                <span className="text-[11px] font-mono text-slate-400">developer.config.js</span>
-                <span className="w-4 h-4 text-purple-600 dark:text-purple-400 font-mono text-xs">⚛</span>
-              </div>
 
-              {/* Code Snippet */}
-              <div className="pt-4 font-mono text-xs space-y-2 leading-relaxed text-slate-700 dark:text-slate-300">
-                <p><span className="text-purple-600 dark:text-purple-400">const</span> developer = &#123;</p>
-                <p className="pl-4">name: <span className="text-emerald-600 dark:text-emerald-400">"{personalInfo.name}"</span>,</p>
-                <p className="pl-4">role: <span className="text-emerald-600 dark:text-emerald-400">"{personalInfo.role}"</span>,</p>
-                <p className="pl-4">currentCompany: <span className="text-emerald-600 dark:text-emerald-400">"Bridgeon Solutions LLP"</span>,</p>
-                <p className="pl-4">primaryStack: [</p>
-                <p className="pl-8 text-amber-600 dark:text-amber-300">"React.js", "Redux Toolkit", "Tailwind CSS"</p>
-                <p className="pl-4">],</p>
-                <p className="pl-4">passion: <span className="text-emerald-600 dark:text-emerald-400">"Building clean, performant web apps"</span>,</p>
-                <p className="pl-4">availableForHire: <span className="text-indigo-600 dark:text-indigo-400">true</span></p>
-                <p>&#125;;</p>
-              </div>
+                {/* Developer details below photo */}
+                <div className="mt-4 pt-3 border-t border-slate-100 dark:border-white/[0.08] flex items-center justify-between">
+                  <div>
+                    <h3 className="font-bold text-slate-900 dark:text-white text-sm">
+                      {personalInfo.name}
+                    </h3>
+                    <p className="text-xs text-purple-600 dark:text-purple-400 font-mono">
+                      {personalInfo.role}
+                    </p>
+                  </div>
 
-              {/* Quick Resume Direct Download CTA Inside Card */}
-              <div className="mt-6 pt-4 border-t border-slate-100 dark:border-white/[0.08] flex items-center justify-between">
-                <span className="text-xs text-slate-500 dark:text-slate-400 font-mono">Curriculum Vitae</span>
-                <button
-                  onClick={onOpenResume}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-purple-50 dark:bg-purple-600/20 text-purple-700 dark:text-purple-300 hover:bg-purple-100 dark:hover:bg-purple-600/30 transition-colors cursor-pointer"
-                >
-                  <FileDown className="w-3.5 h-3.5" />
-                  <span>Get Resume</span>
-                </button>
-              </div>
+                  <button
+                    onClick={onOpenResume}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-purple-50 dark:bg-purple-600/20 text-purple-700 dark:text-purple-300 hover:bg-purple-100 dark:hover:bg-purple-600/30 transition-colors cursor-pointer"
+                  >
+                    <FileDown className="w-3.5 h-3.5" />
+                    <span>Resume</span>
+                  </button>
+                </div>
 
+              </div>
             </div>
           </div>
 
