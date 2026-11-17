@@ -90,11 +90,6 @@ export default function ResumeModal({ isOpen, onClose }) {
 
             <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-500 dark:text-slate-400 mt-3">
               <span className="flex items-center gap-1.5">
-                <Phone className="w-3.5 h-3.5 text-purple-500" />
-                {personalInfo.phone}
-              </span>
-              <span>•</span>
-              <span className="flex items-center gap-1.5">
                 <Mail className="w-3.5 h-3.5 text-purple-500" />
                 {personalInfo.email}
               </span>

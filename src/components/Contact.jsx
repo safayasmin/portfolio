@@ -94,38 +94,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Phone Card */}
-            <div className="bg-white dark:bg-[#0F111C]/90 border border-slate-200 dark:border-white/[0.08] hover:border-purple-300 dark:hover:border-purple-500/35 rounded-2xl p-5 sm:p-6 transition-all duration-300 group shadow-sm dark:shadow-xl">
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex items-center gap-3.5">
-                  <div className="p-3 rounded-xl bg-emerald-100 dark:bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 group-hover:scale-105 transition-transform">
-                    <Phone className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-mono text-slate-400 uppercase tracking-wider">Direct Phone / WhatsApp</span>
-                    <a
-                      href={`tel:${personalInfo.phone}`}
-                      className="block text-sm sm:text-base font-bold text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors mt-0.5"
-                    >
-                      {personalInfo.phone}
-                    </a>
-                  </div>
-                </div>
-
-                <button
-                  onClick={() => handleCopy(personalInfo.phone, 'phone')}
-                  className="p-2 rounded-lg bg-slate-100 dark:bg-white/[0.04] hover:bg-emerald-100 dark:hover:bg-emerald-600/20 border border-slate-200 dark:border-white/[0.08] text-slate-500 dark:text-slate-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors cursor-pointer"
-                  title="Copy Phone"
-                >
-                  {copiedType === 'phone' ? (
-                    <Check className="w-4 h-4 text-emerald-500" />
-                  ) : (
-                    <Copy className="w-4 h-4" />
-                  )}
-                </button>
-              </div>
-            </div>
-
             {/* LinkedIn Card */}
             <div className="bg-white dark:bg-[#0F111C]/90 border border-slate-200 dark:border-white/[0.08] hover:border-purple-300 dark:hover:border-purple-500/35 rounded-2xl p-5 sm:p-6 transition-all duration-300 group shadow-sm dark:shadow-xl">
               <div className="flex items-center gap-3.5">
