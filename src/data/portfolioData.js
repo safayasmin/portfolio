@@ -3,7 +3,6 @@ export const personalInfo = {
   role: "Frontend Developer",
   shortRole: "React & Frontend Developer",
   email: "safayasmin567@gmail.com",
-  phone: "7736726617",
   location: "Calicut, Kerala, India",
   linkedin: "https://linkedin.com/in/safa-yasmin-dev/",
   linkedinDisplay: "linkedin.com/in/safa-yasmin-dev",

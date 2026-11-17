@@ -5,30 +5,28 @@ import {
   MapPin, 
   CheckCircle2, 
   Building2, 
-  Sparkles,
-  ArrowUpRight,
-  Layers
+  Sparkles
 } from 'lucide-react';
 import { experienceData } from '../data/portfolioData';
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 relative overflow-hidden bg-[#090A11]/60">
+    <section id="experience" className="py-24 relative overflow-hidden bg-slate-50/70 dark:bg-[#090A11]/60 transition-colors duration-300">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/3 w-[500px] h-[350px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/3 w-[500px] h-[350px] bg-purple-500/10 dark:bg-purple-600/10 rounded-full blur-[150px] pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-mono">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-500/10 border border-purple-200 dark:border-purple-500/20 text-purple-700 dark:text-purple-300 text-xs font-mono">
             <Briefcase className="w-3.5 h-3.5" />
             <span>Career Milestones</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
             Work <span className="text-gradient-purple">Experience</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
             Hands-on professional experience delivering modern frontend applications.
           </p>
         </div>
@@ -47,76 +45,76 @@ export default function Experience() {
                 <span className="relative flex h-5 w-5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-5 w-5 bg-gradient-to-tr from-purple-600 to-cyan-400 p-[2px]">
-                    <span className="w-full h-full bg-[#07080D] rounded-full flex items-center justify-center">
-                      <span className="w-2 h-2 rounded-full bg-purple-400" />
+                    <span className="w-full h-full bg-white dark:bg-[#07080D] rounded-full flex items-center justify-center">
+                      <span className="w-2 h-2 rounded-full bg-purple-600 dark:bg-purple-400" />
                     </span>
                   </span>
                 </span>
               </div>
 
               {/* Experience Card */}
-              <div className="bg-[#0F111C]/90 hover:bg-[#121526] border border-white/[0.08] hover:border-purple-500/40 rounded-2xl p-6 sm:p-8 shadow-xl transition-all duration-300 group">
+              <div className="bg-white dark:bg-[#0F111C]/90 hover:bg-slate-50 dark:hover:bg-[#121526] border border-slate-200 dark:border-white/[0.08] hover:border-purple-300 dark:hover:border-purple-500/40 rounded-2xl p-6 sm:p-8 shadow-sm dark:shadow-xl transition-all duration-300 group">
                 
                 {/* Header Information */}
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 pb-5 border-b border-white/[0.07]">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 pb-5 border-b border-slate-100 dark:border-white/[0.07]">
                   <div>
-                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-300 text-xs font-mono font-medium mb-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/25 text-emerald-700 dark:text-emerald-300 text-xs font-mono font-medium mb-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                       {item.current ? "Active Role" : "Completed"}
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-300 transition-colors">
                       {item.role}
                     </h3>
-                    <div className="flex flex-wrap items-center gap-3 text-sm text-slate-300 mt-1 font-medium">
-                      <span className="flex items-center gap-1.5 text-purple-300">
-                        <Building2 className="w-4 h-4 text-purple-400" />
+                    <div className="flex flex-wrap items-center gap-3 text-sm text-slate-600 dark:text-slate-300 mt-1 font-medium">
+                      <span className="flex items-center gap-1.5 text-purple-700 dark:text-purple-300">
+                        <Building2 className="w-4 h-4 text-purple-600 dark:text-purple-400" />
                         {item.company}
                       </span>
-                      <span className="text-slate-600">•</span>
-                      <span className="flex items-center gap-1 text-slate-400 text-xs sm:text-sm">
-                        <MapPin className="w-3.5 h-3.5 text-slate-500" />
+                      <span className="text-slate-400">•</span>
+                      <span className="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs sm:text-sm">
+                        <MapPin className="w-3.5 h-3.5" />
                         {item.location}
                       </span>
                     </div>
                   </div>
 
                   {/* Period Badge */}
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-300 font-mono text-xs sm:text-sm shrink-0 self-start">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-50 dark:bg-purple-500/10 border border-purple-200 dark:border-purple-500/20 text-purple-700 dark:text-purple-300 font-mono text-xs sm:text-sm shrink-0 self-start">
                     <Calendar className="w-3.5 h-3.5" />
                     <span>{item.period}</span>
                   </div>
                 </div>
 
                 {/* Brief Narrative */}
-                <p className="text-slate-300 text-sm mt-5 leading-relaxed">
+                <p className="text-slate-600 dark:text-slate-300 text-sm mt-5 leading-relaxed">
                   {item.description}
                 </p>
 
                 {/* Key Responsibilities list strictly from Resume */}
                 <div className="mt-5 space-y-3">
-                  <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400">
+                  <h4 className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 font-semibold">
                     Key Responsibilities & Core Deliverables
                   </h4>
                   <ul className="space-y-2.5">
                     {item.responsibilities.map((resp, rIdx) => (
-                      <li key={rIdx} className="flex items-start gap-3 text-sm text-slate-300">
-                        <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0 mt-0.5" />
+                      <li key={rIdx} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5" />
                         <span>{resp}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                {/* Technologies Used Strip */}
-                <div className="mt-6 pt-5 border-t border-white/[0.07] flex flex-wrap items-center gap-2">
+                {/* Tech Badges */}
+                <div className="mt-6 pt-5 border-t border-slate-100 dark:border-white/[0.07] flex flex-wrap items-center gap-2">
                   <span className="text-xs font-mono text-slate-400 mr-2 flex items-center gap-1">
-                    <Layers className="w-3.5 h-3.5 text-purple-400" />
-                    Stack:
+                    <Sparkles className="w-3.5 h-3.5 text-purple-500" />
+                    Technologies:
                   </span>
                   {item.technologies.map((tech, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-3 py-1 rounded-md text-xs font-mono bg-white/[0.04] border border-white/[0.08] text-purple-200 group-hover:border-purple-500/30 transition-colors"
+                      className="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-100 dark:bg-white/[0.04] border border-slate-200 dark:border-white/[0.08] text-slate-700 dark:text-slate-300"
                     >
                       {tech}
                     </span>
@@ -124,12 +122,10 @@ export default function Experience() {
                 </div>
 
               </div>
-
             </div>
           ))}
 
         </div>
-
       </div>
     </section>
   );

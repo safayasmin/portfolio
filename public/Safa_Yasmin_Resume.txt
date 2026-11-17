@@ -1,0 +1,52 @@
+SAFA YASMIN
+Frontend Developer (React.js)
+Phone: +91 80894 48943
+Email: safayasmin2006@gmail.com
+Location: Malappuram, Kerala, India
+LinkedIn: https://linkedin.com/in/safayasmin
+
+--------------------------------------------------------------------------------
+PROFESSIONAL SUMMARY
+--------------------------------------------------------------------------------
+Passionate Frontend Developer Intern at Bridgeon Solutions LLP with hands-on 
+experience building modern, responsive, and performance-optimized web applications 
+using React.js, Tailwind CSS, and Redux Toolkit. Strong understanding of 
+reusable component architectures, state management, REST API integration, 
+and frontend performance optimization.
+
+--------------------------------------------------------------------------------
+TECHNICAL SKILLS
+--------------------------------------------------------------------------------
+• Frontend: React.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, TanStack Query
+• State Management: Redux Toolkit, Context API, React Hooks
+• Backend & Foundations: Python, Django, RESTful APIs, DSA
+• Tools & Version Control: Git, GitHub, VS Code, Postman, Vite
+• Professional Skills: Problem Solving, Agile Collaboration, UI/UX Precision
+
+--------------------------------------------------------------------------------
+WORK EXPERIENCE
+--------------------------------------------------------------------------------
+Frontend Developer Intern
+Bridgeon Solutions LLP | Calicut, Kerala
+01/2026 - Present
+• Engineered modular and high-performance React.js components using modern hooks.
+• Architected scalable global application state using Redux Toolkit slices.
+• Integrated RESTful APIs with TanStack Query and Axios for data caching and sync.
+• Built fully responsive, mobile-first designs with Tailwind CSS.
+
+--------------------------------------------------------------------------------
+PROJECTS
+--------------------------------------------------------------------------------
+BloomCraft – Flower & Crochet E-Commerce Platform
+Tech Stack: React.js, Tailwind CSS, Redux Toolkit, React Router, Axios
+• Developed an end-to-end responsive web shop featuring search, filter, and sort.
+• Implemented Redux Toolkit store for cart, wishlist, and user session handling.
+• Configured client-side routing, protected checkout routes, and modal dialogs.
+• Optimized UI rendering speed with useMemo and useCallback hooks.
+
+--------------------------------------------------------------------------------
+EDUCATION
+--------------------------------------------------------------------------------
+Higher Secondary Education – Computer Science
+DUHSS Thootha | 01/2023 - 01/2025
+• Core coursework: Computer Science, Programming, DSA, Mathematics.
